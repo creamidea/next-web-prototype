@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "next-web-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "inversify": "^5.0.1",
+    "inversify-binding-decorators": "^4.0.0",
+    "inversify-inject-decorators": "^3.1.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.7",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "b": "tsc",
+    "w": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src --fix --ext .ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{.ts,.tsx}": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
+}
